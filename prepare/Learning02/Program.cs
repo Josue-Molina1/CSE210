@@ -1,9 +1,18 @@
-using System;
+public class Job (
+    public string _company;
+    public string _jobTitle
+    public int _startYear;
+    public int _endYear;
+//constructor
 
-class Program
-{
-    static void Main(string[] args)
+
+    public Job()
     {
-        Console.WriteLine("Hello Learning02 World!");
+
     }
-}
+
+    public void Display()// method
+    {
+        Console.WriteLine($"{_jobTitle}({_companyName}) {_startYear}-{_endYear}");
+    }
+)
