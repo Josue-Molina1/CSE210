@@ -4,7 +4,8 @@
  using System.IO;
  using System.Linq;
 
- class Program
+//  class Program
+// should divide the two classes so they can work, save on same folder.
  class Journal
  {
 
