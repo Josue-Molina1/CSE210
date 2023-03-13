@@ -18,6 +18,16 @@ public class goalTracker{
             simple._goalType = "simple";
             Goals.Add(simple);
         }
+        else if(choice == "2"){
+            Eternal eternal = new Eternal(goalName, goalDescription, pointWorth);
+            eternal._goalType = "eternal";
+            Goals.Add(eternal);
+        }
+        else if(choice == "3"){
+            Checklist checklist = new Checklist(goalName, goalDescription, pointWorth);
+            checklist._goalType = "checklist";
+            Goals.Add(checklist);
+        }
 
     }
 
@@ -35,7 +45,6 @@ public class goalTracker{
         }
     }
 
-
     public void completeGoal(){
         Console.WriteLine("please chose the goal you completed");
         int choice = int.Parse(Console.ReadLine());
@@ -44,4 +53,17 @@ public class goalTracker{
             Goals[choice].checkGoal();
         }
     }
+
+    public void readGoal(){
+        string filePath = "goal.txt";
+
+        Console.WriteLine("the goals are: ");
+        
+        string[] lines = System.IO.File.ReadAllLines(filePath);
+
+        foreach (string line in lines)
+        {
+            Console.WriteLine(line);
+        }
+            }
 }

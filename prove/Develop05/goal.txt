@@ -1,2 +1,2 @@
 0
-simple:eat,food,10,False.
+simple:sleep early,go to bed in time,100,False.
