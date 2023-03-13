@@ -16,7 +16,7 @@ class Program
       int answer=  int.Parse(Console.ReadLine()); // Check differences between Write and WriteLine
       if (answer > number)
       {
-        Console.WriteLine("Lower");
+        Console.WriteLine("Lower");// adds a space between them
         turns += 1;
       }
       else if (answer < number)
@@ -35,3 +35,4 @@ class Program
     }
 
 }
+//submit code to Github 

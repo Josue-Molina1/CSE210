@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/prove/Develop05/Develop05.csproj",
+                "${workspaceFolder}/Develop05.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/prove/Develop05/Develop05.csproj",
+                "${workspaceFolder}/Develop05.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/prove/Develop05/Develop05.csproj"
+                "${workspaceFolder}/Develop05.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

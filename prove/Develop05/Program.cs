@@ -1,9 +1,46 @@
-using System;
-
-class Program
+goalTracker goaltracker = new goalTracker();
+while (true)
 {
-    static void Main(string[] args)
+    
+    Console.WriteLine("Menu Options: ");
+    Console.WriteLine("1. Create New Goal. ");
+    Console.WriteLine("2. List Goal. ");
+    Console.WriteLine("3. Save Goal. ");
+    Console.WriteLine("4. Load goals. ");
+    Console.WriteLine("5. Record event. ");
+    Console.WriteLine("6. Exit. ");
+    Console.WriteLine("Select a choice from the menu: ");
+
+    int choice = int.Parse(Console.ReadLine());
+    if (choice == 1)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        goaltracker.addGoal();
+    }
+    else if (choice == 2)
+    {
+        goaltracker.readGoal();
+    }
+    else if (choice == 3)
+    {
+        Console.WriteLine("What is the filename for the goal file?");
+        Console.ReadLine();
+    }
+    else if (choice == 4)
+    {
+        goaltracker.saveGoal();
+    }
+    else if (choice == 5)
+    {
+        goaltracker.completeGoal();
+    }
+    else if (choice == 6)
+    {
+    // Exit
+    Console.WriteLine("Goodbye!");
+    break;
+    }
+    else
+    {
+    Console.WriteLine("Invalid option. Please try again.");
     }
 }
