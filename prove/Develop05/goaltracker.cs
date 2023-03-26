@@ -44,10 +44,17 @@ public class goalTracker{
 
         }
     }
+// 
+    public void displayGoal(){
+        foreach(Goal goal in Goals){
+            goal.displayGoals();
+        }
+//
+    }
 
     public void completeGoal(){
         Console.WriteLine("please chose the goal you completed");
-        int choice = int.Parse(Console.ReadLine());
+        int choice = int.Parse(Console.ReadLine())-1;
         if (!Goals[choice].isChecked) {
             totalPoints += Goals[choice]._pointWorth;
             Goals[choice].checkGoal();

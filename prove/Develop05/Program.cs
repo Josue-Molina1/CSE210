@@ -1,7 +1,10 @@
 goalTracker goaltracker = new goalTracker();
+DateTime now = DateTime.Now;
+
 while (true)
 {
-    
+    Console.WriteLine("Welcome to your goal tracker :)");
+    Console.WriteLine(now.ToString("F"));
     Console.WriteLine("Menu Options: ");
     Console.WriteLine("1. Create New Goal. ");
     Console.WriteLine("2. List Goal. ");

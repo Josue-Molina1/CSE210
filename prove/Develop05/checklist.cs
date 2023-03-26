@@ -1,9 +1,11 @@
 public class Checklist : Goal{
-
-    public Checklist(string goalName, string goalDescription, int pointWorth) {
+    public int ammount;
+    public Checklist(string goalName, string goalDescription, int pointWorth, int ammount, bool isChecked) {
         _pointWorth = pointWorth;
         _goalDescription = goalDescription;
         _goalName = goalName;
+        this.ammount = ammount;
+        this.isChecked = isChecked;
     }
 
     public override void listGoal()
@@ -21,6 +23,9 @@ public class Checklist : Goal{
         isChecked = true;
         return _pointWorth;
     }
-
+        public override void displayGoals()
+    {
+         Console.WriteLine("$[ ] {_goalName}{_goalType}:,{_goalDescription},{_pointWorth},{goal.isChecked}.");
+    }
 
 }

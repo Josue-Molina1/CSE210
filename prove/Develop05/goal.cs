@@ -15,9 +15,12 @@ public class Goal{
 
     }
 
-    public virtual int checkGoal(){
-        return 0;
+    public virtual void checkGoal(){
+        
 
     }
 
+    public virtual void displayGoals(){
+       
+    }
 }
