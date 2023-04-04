@@ -1,10 +1,10 @@
+// Goal tracker app
 goalTracker goaltracker = new goalTracker();
-DateTime now = DateTime.Now;
+// goaltracker.addGoal();
 
 while (true)
 {
-    Console.WriteLine("Welcome to your goal tracker :)");
-    Console.WriteLine(now.ToString("F"));
+    
     Console.WriteLine("Menu Options: ");
     Console.WriteLine("1. Create New Goal. ");
     Console.WriteLine("2. List Goal. ");
@@ -21,7 +21,7 @@ while (true)
     }
     else if (choice == 2)
     {
-        goaltracker.readGoal();
+        goaltracker.displayGoal();
     }
     else if (choice == 3)
     {

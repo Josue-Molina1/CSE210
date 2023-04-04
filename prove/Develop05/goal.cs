@@ -1,10 +1,9 @@
-public class Goal{
+public abstract class Goal{
 
     public bool isChecked = false;
     public int _pointWorth;
     public string _goalName;
     public string _goalDescription;
-
     public string _goalType;
 
     public Goal() {
@@ -15,12 +14,9 @@ public class Goal{
 
     }
 
-    public virtual void checkGoal(){
-        
+    public abstract int checkGoal();
 
-    }
-
-    public virtual void displayGoals(){
+    public virtual void displayGoal(){
        
     }
 }

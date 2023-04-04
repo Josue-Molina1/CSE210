@@ -1,11 +1,15 @@
 public class Checklist : Goal{
-    public int ammount;
-    public Checklist(string goalName, string goalDescription, int pointWorth, int ammount, bool isChecked) {
+    public int amount;
+
+    public int amountCompleted = 0;
+
+
+    public Checklist(string goalName, string goalDescription, int pointWorth, int amount, bool isChecked) {
         _pointWorth = pointWorth;
         _goalDescription = goalDescription;
         _goalName = goalName;
-        this.ammount = ammount;
         this.isChecked = isChecked;
+        this.amount = amount;
     }
 
     public override void listGoal()
@@ -20,12 +24,26 @@ public class Checklist : Goal{
 
     public override int checkGoal()
     {
+        if (amountCompleted == amount)
+        {
         isChecked = true;
         return _pointWorth;
+        }
+        else{
+            amountCompleted +=1; 
+            return 0;
+        }
     }
-        public override void displayGoals()
+
+    public override void displayGoal()
     {
-         Console.WriteLine("$[ ] {_goalName}{_goalType}:,{_goalDescription},{_pointWorth},{goal.isChecked}.");
+        if (isChecked) {
+            Console.WriteLine($"[ ] {_goalName} ({_goalDescription}) -- {amountCompleted} / {amount}");
+        }
+        else {
+            Console.WriteLine($"[ ] {_goalName} ({_goalDescription}) -- {amountCompleted} / {amount}");
+        }
     }
+
 
 }

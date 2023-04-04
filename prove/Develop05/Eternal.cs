@@ -17,10 +17,10 @@ public class Eternal : Goal{
         return _pointWorth;
     }
 
-    public override void displayGoals()
+    public override void displayGoal()
     {
-         Console.WriteLine("$[ ] {_goalName}{_goalType}:,{_goalDescription},{_pointWorth},{goal.isChecked}.");
+        Console.WriteLine($"[ ] {_goalName} ({_goalDescription})");
+        
     }
 }
-
 
